@@ -6,6 +6,7 @@
 .*
 *~
 *.out
+*.exe
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
