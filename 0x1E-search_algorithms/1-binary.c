@@ -10,15 +10,26 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-        size_t i = 0;
+	size_t i, mid;
 
-        for (i = 0; i < size; i++)
-        {
-                if (array[i] == value) {
-                        printf("Value checked array[%lu] = [%d]\n",i,array[i]);
-                        return (i);
-                }
-                printf("Value checked array[%lu] = [%d]\n",i,array[i]);
-        }
-        return (-1);
+	printf("Searching in array: ");
+	for (i = 0; i < size - 1; i++)
+		printf("%d,", array[i]);
+	printf("%d\n", array[i]);
+	if (size % 2 == 0)
+		mid = (size / 2) - 1;
+	else
+		mid = size / 2;
+	if (value == array[mid])
+		return (mid);
+	else if ((value > array[mid]) && size > 1)
+	{
+		return (binary_search((array + (mid + 1)), size / 2, value));
+	}
+	else if ((value < array[mid]) && size > 1)
+	{
+		return (binary_search(array, mid, value));
+	}
+	else
+		return (-1);
 }
