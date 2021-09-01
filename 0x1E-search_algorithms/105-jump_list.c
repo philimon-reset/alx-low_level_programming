@@ -11,10 +11,10 @@
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	listint_t *temp = list, *b = list, *a = NULL;
-	size_t val = 0, S = 0;
+	size_t val = 0;
 
 	if (temp == NULL)
-		return (-1);
+		return (NULL);
 	while ((b->n < value) && (b->index) < size)
 	{
 		a = b;
@@ -48,7 +48,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
  *
  * Return: list of index
  */
-listint_t *find(const listint_t *list, size_t b)
+listint_t *find(listint_t *list, size_t b)
 {
 	printf("val is %lu\n", b);
 	while (list)
