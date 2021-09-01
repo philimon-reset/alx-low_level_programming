@@ -38,7 +38,7 @@ int exponential_search(int *array, size_t size, int value)
 		mid = binary(array, size - (i / 2), value);
 	if ((int)(mid + i / 2) == -1)
 		return (-1);
-	return (mid);
+	return (mid + i / 2);
 }
 
 /**
