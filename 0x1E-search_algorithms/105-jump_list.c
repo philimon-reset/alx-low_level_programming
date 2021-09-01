@@ -50,7 +50,6 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
  */
 listint_t *find(listint_t *list, size_t b)
 {
-	printf("val is %lu\n", b);
 	while (list)
 	{
 		if (list->index == b)
