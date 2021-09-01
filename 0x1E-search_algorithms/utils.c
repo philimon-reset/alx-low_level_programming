@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "search_algos.h"
 
 void free_list(listint_t *list);
@@ -32,8 +31,6 @@ listint_t *create_list(int *array, size_t size)
 	}
 	return (list);
 }
-#include <stdlib.h>
-#include "search_algos.h"
 
 /**
  * free_list - Deallocates a singly linked list
@@ -51,8 +48,6 @@ void free_list(listint_t *list)
 		free_list(node);
 	}
 }
-#include <stdio.h>
-#include "search_algos.h"
 
 /**
  * print_list - Prints the content of a listint_t
@@ -68,4 +63,21 @@ void print_list(const listint_t *list)
 		list = list->next;
 	}
 	printf("\n");
+}
+
+/**
+ * find - find content of a listint_t
+ *
+ * @list: Pointer to the head of the list
+ * @b: node with value to be found
+ */
+listint_t *find(const listint_t *list, size_t b)
+{
+	while (list)
+	{
+		if (list->index == b)
+			return (list);
+		list = list->next;
+	}
+	return (list);
 }
