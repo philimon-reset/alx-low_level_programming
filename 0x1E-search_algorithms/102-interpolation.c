@@ -22,21 +22,22 @@ int interpolation_search(int *array, size_t size, int value)
 		mid = size / 2;
 	if (value == array[mid])
 	{
-		printf("Value checked array[%lu] = [%d]", mid, array[mid]);
+		printf("Value checked array[%lu] = [%d]\n", mid, array[mid]);
 		return (mid);
 	}
+	mid = probe(low, high, value, array);
 	while (mid < size && low != high)
 	{
-		printf("Value checked array[%lu] = [%d]", mid, array[mid]);
-		mid = probe(low, high, value, array);
+		printf("Value checked array[%lu] = [%d]\n", mid, array[mid]);
 		if (value == array[mid])
 			return (mid);
 		else if (value > array[mid])
 			low = mid - 1;
 		else if (value < array[mid])
 			high = mid - 1;
+		mid = probe(low, high, value, array);
 	}
-	printf("Value checked array[%lu] is out of range", mid);
+	printf("Value checked array[%lu] is out of range\n", mid);
 	return (-1);
 }
 
