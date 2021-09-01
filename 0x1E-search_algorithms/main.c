@@ -14,6 +14,6 @@ int main(void)
     size_t size = sizeof(array) / sizeof(array[0]);
 
     int num = 1996;
-    printf("Found %d at index: %d\n\n", num, interpolation_search(array, size, num));
+    printf("Found %d at index: %d\n\n", num, exponential_search(array, size, num));
     return (EXIT_SUCCESS);
 }
