@@ -10,10 +10,15 @@
 
 int interpolation_search(int *array, size_t size, int value)
 {
-	size_t mid, low = 0, high = size - 1;
+	size_t mid = 0, low = 0, high = size - 1;
 
 	if (array == NULL)
 		return (-1);
+	if (array[0] == value)
+	{
+		printf("Value checked array[%lu] = [%d]\n", mid, array[mid]);
+		return (mid);
+	}
 
 	if (size % 2 == 0)
 		mid = (size / 2) - 1;
