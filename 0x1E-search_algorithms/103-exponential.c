@@ -23,14 +23,16 @@ int exponential_search(int *array, size_t size, int value)
 	if (i >= size)
 	{
 		i = size;
+		array = array + (i / 2);
+		mid = binary(array, i - (i / 2), value);
 		printf("Value found between indexes [%lu] and [%lu]\n", i / 2, size - 1);
 	}
 	else
 	{
 		printf("Value found between indexes [%lu] and [%lu]\n", i / 2, i);
+		array = array + (i / 2);
+		mid = binary(array, (i - (i / 2) + 1), value);
 	}
-	array = array + (i / 2);
-	mid = binary(array, i - (i / 2), value);
 	if ((int)(mid) == -1)
 		return (-1);
 	return (mid + i / 2);
