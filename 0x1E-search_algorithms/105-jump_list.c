@@ -1,9 +1,9 @@
 #include "search_algos.h"
 
 /**
- * jump_list - searches for a value in an array of integers
- * @list: a pointer to the first element of the array
- * @size: number of elements in array
+ * jump_list - searches for a value in a linked list
+ * @list: a pointer to the first element of the linked list
+ * @size: number of elements in linked list
  * @value: value to search for
  * Return: int
  */
