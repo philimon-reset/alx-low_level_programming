@@ -36,10 +36,7 @@ int interpolation_search(int *array, size_t size, int value)
 		if (value == array[mid])
 			return (mid);
 		else if (value > array[mid])
-		{
-			printf("%lu\n", low);
 			low = mid + 1;
-		}
 		else if (value < array[mid])
 			high = mid - 1;
 		mid = probe(low, high, value, array);
