@@ -1,7 +1,5 @@
 #include "search_algos.h"
 
-void free_list(listint_t *list);
-
 /**
  * create_list - Creates a single linked list
  *
@@ -63,11 +61,7 @@ void print_list(const listint_t *list)
 		list = list->next;
 	}
 	printf("\n");
-}#include <stdlib.h>
-#include <math.h>
-#include "search_algos.h"
-
-void free_skiplist(skiplist_t *list);
+}
 
 /**
  * init_express - Initializes the express lane of the linked list
@@ -124,8 +118,6 @@ skiplist_t *create_skiplist(int *array, size_t size)
 	init_express(list, save_size);
 	return (list);
 }
-#include <stdlib.h>
-#include "search_algos.h"
 
 /**
  * free_skiplist - Deallocates a singly linked list
@@ -143,9 +135,6 @@ void free_skiplist(skiplist_t *list)
 		free_skiplist(node);
 	}
 }
-#include <stdio.h>
-#include <stdlib.h>
-#include "search_algos.h"
 
 /**
  * print_skiplist - dump the content of a skiplist_t
