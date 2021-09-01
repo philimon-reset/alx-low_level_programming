@@ -31,7 +31,6 @@ int main(void)
     free_skiplist(list);
     return (EXIT_SUCCESS);
 }
-
 /**
  * init_express - Initializes the express lane of the linked list
  *
