@@ -9,11 +9,12 @@
 
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
-	skiplist_t *C = list->express, *p = list, *F = NULL;
+	skiplist_t *C = NULL, *p = list, *F = NULL;
 
-	if (C == NULL)
+	if (list == NULL)
 		return (NULL);
 
+	C = list->express;
 	if (p->n == value)
 		return (p);
 	while (p->express)
