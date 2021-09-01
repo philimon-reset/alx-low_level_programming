@@ -45,6 +45,8 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
  *
  * @list: Pointer to the head of the list
  * @b: node with value to be found
+ *
+ * Return: list of index
  */
 listint_t *find(const listint_t *list, size_t b)
 {
