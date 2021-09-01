@@ -64,20 +64,3 @@ void print_list(const listint_t *list)
 	}
 	printf("\n");
 }
-
-/**
- * find - find content of a listint_t
- *
- * @list: Pointer to the head of the list
- * @b: node with value to be found
- */
-listint_t *find(const listint_t *list, size_t b)
-{
-	while (list)
-	{
-		if (list->index == b)
-			return (list);
-		list = list->next;
-	}
-	return (list);
-}
